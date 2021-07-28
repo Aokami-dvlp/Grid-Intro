@@ -1,4 +1,4 @@
-#GRID
+# GRID
 
 I grid sono un prezioso supporto nella creazione di layout responsive per i nostri lavori.
 
@@ -68,3 +68,16 @@ ora non ci resta che andare a comunicare ai nostri elementi a quale area devono 
      grid-area:footer;
  }
  ```
+
+Nella definizione delle dimensioni di righe e colonne, una unità di misura che può essere molto utile è **fr** la quale ci divide la pagina in frazioni in base alle quantità indicate. Ad esempio:
+```
+grid-template-row: 1fr 2fr 1fr 1fr; /*Crea 4 righe con dimensione 20% 40% 20% 20%*/ 
+grid-template-column: repeat(3, 1fr); /*Crea 3 colonne con dimensione 33% 33% 33%*/
+```
+Per quanto riguarda il posizionamento degli elementi invece, possiamo, alternativamente alla combinazione **grid-template-area** e **grid-area** effettuare un posizionamento preciso sfruttando le linee della griglia (**attenzione, il riferimento sono le linee che dividono le celle non le righe della griglia**). Ad esempio:
+```
+grid-column: 4/5; /* l'elemento si estende dalla linea verticale 4 alla linea verticale 5 della griglia*/
+grid-row: 2/6; /*l'elemento si estende dalla linea orizzontale 2 alla linea orizzontale 6 della griglia*/
+```
+
+Il codice all'interno della repo può essere utilizzato per esercitarsi e vederne il comportamento.
