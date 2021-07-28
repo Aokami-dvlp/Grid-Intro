@@ -1,35 +1,13 @@
-.container {
-    display: grid;
-    /*base del grid template*/
-    grid-template-rows: 100px auto 100px;
-    /*definisce 3 righe, la prima e l'ultima di 150px, 
-    mentre quella al centro occuperà automaticamente 
-    lo spazio restante in base al contenuto di esso.
-    
-    Possiamo anche fornire valori differenti, es:
-    grid-template-rows: 250px 800px 400px;
-
-    Oppure stabilire righe della stessa misura, es:
-    grid-template-rows: repeat(3, 275px); creando così
-    3 righe da 275 pixel.*/
-    grid-template-columns: 20% 80%;
-    /*definisce 2 colonne che occupano rispettivamente
-    il 25% e il 75% della larghezza, seguendo il naturale
-    flow di pagina (da sinistra a destra), classico 
-    layout con sidebar.
-    Anche per la definizione delle colonne valgono le
-    varianti specificate sopra per le righe.*/
-    grid-template-areas: "header header" "sidebar content" "footer footer";
-    /*Definiamo, procedendo per righe, i contenuti che andranno 
-    ad occupare le aree del template che abbiamo creato, dobbiamo 
-    considerare tutte le celle della griglia che abbiamo "disegnato",
-    per questo è necessario ripetere il nome per ogni riga/colonna
-    che vogliamo occupare con un dato contenuto.*/
-}
-
 body {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
 }
 
 
@@ -39,24 +17,32 @@ andranno ad occupare gli spazi precedentemente definiti*/
 .header {
     grid-area: header;
     background-color: green;
+    /*Codice utile solo a stilizzare, ininfluente per la struttura del grid*/
 }
 
 .content {
     height: 69vh;
     grid-area: content;
     background-color: hotpink;
+    /*Codice utile solo a stilizzare, ininfluente per la struttura del grid*/
     overflow-y: scroll;
+    /*Codice utile solo a stilizzare, ininfluente per la struttura del grid*/
 }
 
 aside {
     grid-area: sidebar;
     background-color: rgb(231, 238, 130);
+    /*Codice utile solo a stilizzare, ininfluente per la struttura del grid*/
 }
 
 footer {
     grid-area: footer;
     background-color: rgb(0, 250, 250);
+    /*Codice utile solo a stilizzare, ininfluente per la struttura del grid*/
 }
+
+
+/*Da qui in giù codice utile solo a stilizzare, ininfluente per la struttura del grid*/
 
 article header {
     font-size: 2rem;
