@@ -42,7 +42,7 @@ andranno ad occupare gli spazi precedentemente definiti*/
 }
 
 .content {
-    height: 69.5vh;
+    height: 69vh;
     grid-area: content;
     background-color: hotpink;
     overflow-y: scroll;
